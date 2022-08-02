@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Sprites/titel screen.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/Font 2/VENUSRIS.TTF" type="DynamicFontData" id=2]
+[ext_resource path="res://Scencs/Title.gd" type="Script" id=3]
+[ext_resource path="res://Scencs/Level 1.tscn" type="PackedScene" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+extra_spacing_char = 1
+font_data = ExtResource( 2 )
+
+[node name="Title" type="Node2D"]
+script = ExtResource( 3 )
+first_level = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Play" type="Button" parent="."]
+margin_left = 557.069
+margin_top = 262.148
+margin_right = 687.069
+margin_bottom = 309.148
+custom_fonts/font = SubResource( 1 )
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credit" type="Button" parent="."]
+margin_left = 530.069
+margin_top = 382.148
+margin_right = 716.069
+margin_bottom = 429.148
+custom_fonts/font = SubResource( 1 )
+text = "Credit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 557.069
+margin_top = 512.752
+margin_right = 687.069
+margin_bottom = 559.752
+custom_fonts/font = SubResource( 1 )
+text = "quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_down" from="Play" to="." method="_on_Play_button_down"]
+[connection signal="button_down" from="Credit" to="." method="_on_Credit_button_down"]
+[connection signal="button_down" from="Quit" to="." method="_on_Quit_button_down"]

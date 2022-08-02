@@ -1,0 +1,100 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Sprites/white picture.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/Font 1/AGENCYB.TTF" type="DynamicFontData" id=2]
+[ext_resource path="res://Fonts/Font 2/VENUSRIS.TTF" type="DynamicFontData" id=3]
+[ext_resource path="res://Scencs/Credits.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 2 )
+
+[node name="Credits" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="white picture" type="Sprite" parent="."]
+modulate = Color( 0.0980392, 0.152941, 0.341176, 1 )
+scale = Vector2( 40.1045, 22.5962 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Label" type="Label" parent="."]
+margin_left = 461.786
+margin_top = 38.9458
+margin_right = 769.786
+margin_bottom = 99.9458
+custom_fonts/font = SubResource( 1 )
+text = "Credits"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 527.159
+margin_top = 139.092
+margin_right = 700.159
+margin_bottom = 188.092
+custom_fonts/font = SubResource( 2 )
+text = "Programmer"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 521.159
+margin_top = 198.902
+margin_right = 716.159
+margin_bottom = 247.902
+custom_fonts/font = SubResource( 3 )
+text = "Fadi Al ailan (me)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 527.159
+margin_top = 262.092
+margin_right = 700.159
+margin_bottom = 311.092
+custom_fonts/font = SubResource( 2 )
+text = "Artist"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 521.159
+margin_top = 321.902
+margin_right = 716.159
+margin_bottom = 370.902
+custom_fonts/font = SubResource( 3 )
+text = "Fadi Al ailan (me)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 991.141
+margin_top = 569.208
+margin_right = 1200.85
+margin_bottom = 624.208
+custom_fonts/font = SubResource( 2 )
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]

@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Sprites/Player/Normal Player.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Player/Dead Player.png" type="Texture" id=2]
+[ext_resource path="res://Scencs/Player.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 27.1138, 28.5735 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": false,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": false,
+"name": "Dead",
+"speed": 5.0
+} ]
+
+[node name="Player" type="KinematicBody2D"]
+modulate = Color( 0.454902, 0.537255, 1, 1 )
+collision_layer = 3
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+
+[node name="DeathTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="PSTimer" type="Timer" parent="."]
+one_shot = true
+[connection signal="timeout" from="DeathTimer" to="." method="_on_DeathTimer_timeout"]
+[connection signal="timeout" from="PSTimer" to="." method="_on_PSTimer_timeout"]

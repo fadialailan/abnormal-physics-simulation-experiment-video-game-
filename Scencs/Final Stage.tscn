@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Tiles/Tilesets/newer tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Sprites/congrats text 2.png" type="Texture" id=2]
+[ext_resource path="res://Fonts/Font 1/AGENCYB.TTF" type="DynamicFontData" id=3]
+[ext_resource path="res://Scencs/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scencs/Trap.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scencs/Final Stage.gd" type="Script" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+font_data = ExtResource( 3 )
+
+[node name="Final Stage" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 196608, 1, 0, 131073, 2, 0, 196609, 3, 0, 196609, 4, 0, 131073, 5, 0, 131073, 6, 0, 131073, 7, 0, 131073, 8, 0, 131073, 9, 0, 196609, 10, 0, 196609, 11, 0, 196609, 12, 0, 131073, 13, 0, 131073, 14, 0, 131073, 15, 0, 131073, 16, 0, 131073, 17, 0, 131073, 18, 0, 131073, 19, 0, 196609, 20, 0, 131073, 21, 0, 196610, 65536, 0, 65538, 65537, 0, 0, 65538, 0, 1, 65539, 0, 327681, 65540, 0, 1, 65541, 0, 327681, 65542, 0, 327681, 65543, 0, 1, 65544, 0, 327681, 65545, 0, 1, 65546, 0, 327681, 65547, 0, 327681, 65548, 0, 1, 65549, 0, 327681, 65550, 0, 1, 65551, 0, 327681, 65552, 0, 1, 65553, 0, 1, 65554, 0, 1, 65555, 0, 1, 65556, 0, 2, 65557, 0, 65536, 131072, 0, 262144, 131073, 0, 262146, 131092, 0, 65538, 131093, 0, 65536, 196608, 0, 262144, 196609, 0, 262146, 196628, 0, 262144, 196629, 0, 262146, 262144, 0, 65538, 262145, 0, 65536, 262164, 0, 65538, 262165, 0, 65536, 327680, 0, 65538, 327681, 0, 262146, 327700, 0, 262144, 327701, 0, 262146, 393216, 0, 262144, 393217, 0, 65536, 393236, 0, 262144, 393237, 0, 65536, 458752, 0, 65538, 458753, 0, 65536, 458772, 0, 65538, 458773, 0, 65536, 524288, 0, 262144, 524289, 0, 262146, 524308, 0, 262144, 524309, 0, 262146, 589824, 0, 65538, 589825, 0, 262146, 589844, 0, 262144, 589845, 0, 65536, 655360, 0, 65538, 655361, 0, 262146, 655380, 0, 65538, 655381, 0, 65536, 720896, 0, 262144, 720897, 0, 131072, 720898, 0, 131073, 720899, 0, 131073, 720900, 0, 131073, 720901, 0, 196609, 720902, 0, 131073, 720903, 0, 196609, 720904, 0, 131073, 720905, 0, 196609, 720906, 0, 196609, 720907, 0, 196609, 720908, 0, 196609, 720909, 0, 131073, 720910, 0, 131073, 720911, 0, 196609, 720912, 0, 131073, 720913, 0, 131073, 720914, 0, 131073, 720915, 0, 196609, 720916, 0, 131074, 720917, 0, 262146, 786432, 0, 327680, 786433, 0, 327681, 786434, 0, 327681, 786435, 0, 327681, 786436, 0, 1, 786437, 0, 1, 786438, 0, 327681, 786439, 0, 327681, 786440, 0, 1, 786441, 0, 1, 786442, 0, 327681, 786443, 0, 327681, 786444, 0, 1, 786445, 0, 1, 786446, 0, 327681, 786447, 0, 1, 786448, 0, 1, 786449, 0, 327681, 786450, 0, 327681, 786451, 0, 327681, 786452, 0, 1, 786453, 0, 327682 )
+
+[node name="congrats text" type="Sprite" parent="."]
+position = Vector2( 600.342, 401.938 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="congrats text"]
+margin_left = -373.869
+margin_top = -217.694
+margin_right = 385.131
+margin_bottom = 23.3055
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "You have given us great data Subject ##,
+we definitely would not have been able to
+get such great results with out you, and
+thus we would like to tell you"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="congrats text"]
+margin_left = -373.869
+margin_top = 111.688
+margin_right = 385.131
+margin_bottom = 352.688
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Please stand on the teleporter to
+receive your reword"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 200.457, 640.75 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 1408
+limit_bottom = 832
+
+[node name="Trap" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1161.45, 650.536 )
+[connection signal="body_entered" from="Trap/Area2D" to="Player" method="_on_Area2D_body_entered"]
+
+[editable path="Trap"]

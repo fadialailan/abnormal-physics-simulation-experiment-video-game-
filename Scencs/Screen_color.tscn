@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/white picture.png" type="Texture" id=1]
+[ext_resource path="res://Scencs/Screen_color.gd" type="Script" id=2]
+
+[node name="Screen_color" type="Sprite"]
+modulate = Color( 0.713726, 0.890196, 0.917647, 0.0862745 )
+position = Vector2( 648, 368 )
+scale = Vector2( 41.5, 24 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )

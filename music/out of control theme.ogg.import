@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/out of control theme.ogg-9256215cc01d54a275a8196d508082f8.oggstr"
+
+[deps]
+
+source_file="res://music/out of control theme.ogg"
+dest_files=[ "res://.import/out of control theme.ogg-9256215cc01d54a275a8196d508082f8.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
